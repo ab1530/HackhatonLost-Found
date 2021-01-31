@@ -30,7 +30,9 @@ func _physics_process(delta):
 	elif Input.is_action_pressed("left"):
 		motion.x -= ACCELERATION
 		facing_right = false
-		$AnimationPlayer.play("running")		
+		$AnimationPlayer.play("running")
+	elif Input.is_action_pressed("attack"):
+		$AnimationPlayer.play("attaque")
 	else:
 		motion.x = lerp(motion.x, 0, 0.2)
 		$AnimationPlayer.play("Idle")
